@@ -1,0 +1,611 @@
+//------------------------------- 
+// メインのレイアウト
+//------------------------------- 
+.ly_main {
+    padding-top: 63px;
+    
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    
+    @media screen and (min-width: 769px) {
+        padding-top: 130px;
+        width: calc(100% - 60px);
+    }
+}
+
+//------------------------------- 
+// メインビジュアルのレイアウト
+//------------------------------- 
+.ly_mv {
+    width: 100%;
+    position: relative;
+    
+    //------------------------------- 
+    // ビデオ
+    //------------------------------- 
+    .bl_videoWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        
+        > video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    
+    //------------------------------- 
+    // 画像スライダー
+    //------------------------------- 
+    .bl_slider {
+        opacity: 0;
+        &_item {
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &_caption {
+            position: absolute;
+            bottom: 10px;
+            left: 5px;
+            color: #fff;
+            text-shadow: 0 0 5px #000;
+        }
+        
+    }
+    //------------------------------- 
+    // 切り替えボタン
+    //------------------------------- 
+    .bl_btnWrapper {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        
+        @media screen and (min-width: 769px) {
+            bottom: 20px;
+        }
+        
+        button {
+            text-transform: uppercase;
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            background-color: #fff;
+            color: #555;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            font-weight: normal;
+            font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
+        }
+    }
+}
+
+//------------------------------- 
+// section infomation
+//------------------------------- 
+
+#infomation {
+    
+    &.ly_cont {
+        padding: 54px 0;
+        
+        @media screen and (min-width: 769px) {
+            padding: 60px 0;
+        }
+        
+        .ly_cont_inner {
+            width: 90%;
+            max-width: 1100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .el_lv2Heading {
+            margin-bottom: 32px;
+            
+            @media screen and (min-width: 769px) {
+                font-size: 2rem;
+            }
+        }
+        
+        //------------------------------- 
+        // 縦並びリスト 
+        //------------------------------- 
+        
+        .bl_virtList {
+            margin-bottom: 49.5px;
+            
+            > li {
+                border-bottom: 1px dashed #d9d0d0;
+                padding: 13.5px 0;
+                text-align: center;
+                
+                @media screen and (min-width: 769px) {
+                    text-align: left;
+                }
+                
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+                
+                &:first-child {
+                    padding-top: 0;
+                }
+                
+                &:last-child {
+                    border-width: 0;
+                    padding-bottom: 0;
+                }
+            }
+            
+            &_ttl {
+                font-size: 2.3rem;
+                font-feature-settings: "palt";
+                margin-bottom: 9px;
+                
+                > span {
+                    font-size: 1.6rem;
+                }
+            }
+            
+            &_link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 126px;
+                height: 18px;
+                font-size: 1rem;
+                color: #fff;
+                background-color: #395286;
+            }
+        }
+        //------------------------------- 
+        // 縦並びリスト (ボタン＆バナー)
+        //------------------------------- 
+        .bl_virtBtn {
+            max-width: 360px;
+            margin-right: auto;
+            margin-left: auto;
+            
+            @media screen and (min-width: 769px) {
+                width: 280px;
+            }
+            
+            @media screen and (min-width: 901px) {
+                width: 320px;
+            }
+            
+            
+            
+            
+            &_list {
+                >*:last-child {
+                    
+                    margin-bottom: 0 !important;
+                }
+                
+                > li {
+                    margin-bottom: 18px;
+                }
+            }
+            
+            &_link {
+                display: block;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                transition: .25s;
+                
+                //ホバーされた時の指定 
+                &:hover {
+                    filter: brightness(140%);
+                }
+                
+                > video {
+                    max-width: 101%;
+                    vertical-align: bottom;
+                }
+                
+                > img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+            &_bnr {
+                display: block;
+                width: 100%;
+                position: relative;
+                transition: .25s;
+                
+                //ホバーされた時の指定 
+                &:hover {
+                    filter: brightness(140%);
+                }
+                
+                > img {
+                    max-width: 100%;
+                }
+                
+                > video {
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    box-shadow: 2px 2px 0 #fff;
+                }
+                
+                
+                
+            }
+            
+        }
+        
+        .bl_col {
+            display: block;
+            
+            @media screen and (min-width: 769px) {
+                display: flex;
+                
+                .bl_item {
+                    flex: 1;
+                    padding: 0 80px 0 50px;
+                    
+                    .el_lv2Heading {
+                        text-align: left;
+                        
+                        > span::after {
+                            left: 0;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    
+}
+
+//------------------------------- 
+// section feature
+//------------------------------- 
+
+#feature {
+    
+    .bl_vertList {
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+        > li {
+            width: 100%;
+            height: 400px;
+            
+            @media screen and (min-width: 769px) {
+                height: 600px;
+                
+                &:first-child {
+                    height: 620px;
+                }
+                
+                &:nth-last-of-type(-n+2) {
+                    width: 50%;
+                }
+            }
+        }
+        
+        &_link {
+            display: block;
+            height: inherit;
+            background-position: center bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: .25s;
+            
+            &_facilityt {
+                
+                @media screen and (min-width: 769px) {
+                    background-image: url(../image/facility_pic.jpg) !important;
+                }
+            }
+            
+            // ホバーされた時
+            &:hover {
+                filter: brightness(120%);
+            }
+            
+            &:hover .el_afterIcon__arrow::after{
+                transform: translateX(10px);
+            }
+            
+            
+        }
+        
+        .bl_vertList_txtArea {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            
+            > *:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .el_lv2Heading {
+                color: #fff;
+                text-shadow: 0px 0px 3px #000000, 0px 0px 3px #000000;
+                margin-bottom: 18px;
+                
+                > span::after {
+                    box-shadow: 0px 0px 3px #000000, 0px 0px 3px #000000;
+                }
+                @media screen and (min-width: 769px) {
+                    font-size: 2rem;
+                }
+            }
+            
+            @media screen and (min-width: 769px) {
+                
+                &_pcLB {
+                    top: unset;
+                    bottom: 16%;
+                    left: 64px;
+                    transform: translate(0, 0);
+                    text-align: left;
+                    
+                    .el_lv2Heading { 
+                        text-align: left;
+                        
+                        > span::after {
+                            left: 0;
+                            transform: translateX(0);
+                        }
+                    }
+                    
+                }
+                
+                &_pcLC {
+                    top: unset;
+                    bottom: 39%;
+                    left: 64px;
+                    transform: translate(0, 0);
+                    text-align: left;
+                    
+                    .el_lv2Heading { 
+                        text-align: left;
+                        
+                        > span::after {
+                            left: 0;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+                
+                &_pcRC {
+                    top: auto;
+                    right: 37px;
+                    bottom: 39%;
+                    left: auto;
+                    transform: translate(0, 0);
+                    text-align: left;
+                    
+                    .el_lv2Heading { 
+                        text-align: left;
+                        
+                        > span::after {
+                            left: 0;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+        
+        &_txt {
+            font-size: 2.43rem;
+            color: #fff;
+            letter-spacing: .1em;
+            text-shadow: 0px 0px 3px #000000, 0px 0px 3px #000000;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            
+            > sup {
+                font-size: 1.1rem;
+                vertical-align: text-top;
+                text-shadow: 0px 0px 3px #000000, 0px 0px 3px #000000;
+            }
+            
+            @media screen and (min-width: 769px) {
+                font-size: 2.7rem;
+                white-space: normal;
+            }
+        }
+        
+        &__link {
+            font-size: 1.53rem;
+            letter-spacing: .1em;
+            color: #fff;
+            text-shadow: 0px 0px 3px #000000, 0px 0px 3px #000000;
+            white-space: nowrap;
+            
+            @media screen and (min-width: 769px) {
+                font-size: 1.7rem;
+                white-space: normal;
+            }
+        }
+        
+        &_caption {
+            display: inline-block;
+            color: #fff;
+            text-shadow: 0 0 5px #000;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            
+            & + .bl_vertList_caption {
+                top: 5px;
+                right: unset;
+                bottom: unset;
+                left: 5px;
+                
+                @media screen and (min-width: 769px) {
+                    top: unset;
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+//------------------------------- 
+// section brand_bnr_cation
+//------------------------------- 
+
+#brand_bnr_cation {
+    padding-bottom: 36px;
+    
+    &.ly_cont {
+        padding-top: 70px;
+        
+        .ly_cont_inner {
+            width: 90%;
+            max-width: 900px;
+            margin-right: auto;
+            margin-left: auto; 
+            
+            @media screen and (min-width: 769px) {
+                margin-right: auto;
+                margin-left: auto;    
+            
+            }
+        }
+    }
+    //------------------------------- 
+    // section brand_bnr_cation(media)
+    //------------------------------- 
+    
+    .bl_media {
+        display: block;
+        border: 1px solid #4d5974;
+        margin-bottom: 40px;
+        
+        &:hover {
+            filter: brightness(120%);
+        }
+        @media screen and (min-width: 769px) {
+            height: 300px;
+            
+            &__rev {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+        
+        &_imgWrapper {
+            
+            > img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            @media screen and (min-width: 769px) {
+                width: 65%;
+            }
+        }
+        
+        &_body {
+            padding: 40px 0 20.5px;
+            text-align: center;
+            
+            .el_lv2Heading {
+                margin-bottom: 18px;
+                color: #fff;
+            }
+            @media screen and (min-width: 769px) {
+                width: 35%;
+                padding: 0 0 0 5%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                .el_lv2Heading {
+                    font-size: 2rem;
+                    text-align: left;
+                    
+                    > span::after {
+                        left: 0;
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+        
+        &_txt {
+            color: #fff;
+            font-size: 1.53rem;
+            letter-spacing: .1em;
+            white-space: nowrap;
+            
+            @media screen and (min-width: 769px) {
+                font-size: 1.7rem;
+            }
+        }
+        
+        &:hover .el_afterIcon__arrow::after {
+            transform: translateX(10px);
+        }
+        
+    }
+    //------------------------------- 
+    // section brand_bnr_cation(バナー)
+    //------------------------------- 
+    
+    .bl_bnr {
+        display: block;
+        width: 100%;
+        margin-bottom: 36px;
+        
+        &_imgWrapper {
+            
+            > img {
+                width: 100%;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+        
+        &:hover {
+            opacity: 0.7;
+        }
+        
+    }
+    //------------------------------- 
+    // section brand_bnr_cation(注意喚起)
+    //------------------------------- 
+    
+    .bl_cation {
+        
+        > li {
+            font-size: 1rem;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,290 @@
+//-------------------------------
+//フッターレイアウト
+//-------------------------------
+
+.ly_footer {
+    padding: 36px 0;
+    
+    @media screen and (min-width: 769px) {
+        width: calc(100% - 60px);
+        padding: 40px 0;
+    }
+    
+    &_inner {
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+    
+    //-------------------------------
+    //フッターグローバルナヴィ
+    //-------------------------------
+    
+    .bl_footerGnav {
+        
+        &_list {
+            
+            > li {
+                display: inline-block;
+                padding: 0 9px 13.5px;
+            }
+        }
+        &_link {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 1.26rem;
+            transition: .25s;
+            
+            &.is_active {
+                pointer-events: none;
+                text-decoration: underline;
+            }
+            
+            &:hover {
+                text-decoration: underline;
+            }
+            
+            @media screen and (min-width: 769px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    
+}
+
+//-------------------------------
+//資料請求
+//-------------------------------
+
+#docRequest {
+    
+    .el_lv3Heading {
+        color: #fff;
+        margin-bottom: 9px;
+        
+        @media screen and (min-width: 769px) {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .el_txt {
+        font-size: 1.26rem;
+        color: #fff;
+        margin-bottom: 18px;
+        
+        @media screen and (min-width: 760px) {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .bl_btnWrapper {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        
+        .el_btn {
+            margin-bottom: 18px
+            
+        }
+        
+        @media screen and (min-width: 769px) {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            
+            .el_btn {
+                width: 47%;
+                height: 60px;
+                margin-bottom: 20px
+                
+            }
+        }
+    }
+}
+
+//-------------------------------
+//コンタクト
+//-------------------------------
+
+#contact {
+    
+    .el_lv2Heading {
+        color: #fff;
+        margin-bottom: 9px;
+        
+        @media screen and (min-width: 769px) {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .el_txt {
+        color: #fff;
+        font-size: 1.44rem;
+        letter-spacing: .1em;
+        margin-bottom: 22.5px;
+        
+        @media screen and (min-width: 769px) {
+            font-size: 1.6rem;
+        }
+    }
+    
+    .bl_wrapper {
+        display: flex;
+        flex-direction: column;
+        
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .bl_imgWrapper {
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 13.5px;
+            
+            > img {
+                width: 90%;
+                height: auto;
+                max-width: 390px;
+            }   
+            
+            @media screen and (min-width: 769px) {
+                width: 61%;
+                margin: 0;
+            }
+            @media screen and (min-width: 901px) {
+                width: 52%;
+            }
+            
+        }
+        .bl_spanWrapper {
+            
+            > span {
+                display: block;
+                color: #fff;
+                font-size: 1.26rem;
+                
+                @media screen and (min-width: 769px) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------
+//カンパニーリスト
+//-------------------------------
+#companyList {
+    
+    .bl_company {
+        padding-top: 9px;
+        
+        &_list {
+            margin-bottom: 31.5px;
+            
+            > *:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            > li {
+                margin-bottom: 22.5px;
+                
+                @media screen and (min-width: 769px) {
+                    display: inline-block;
+                    margin-right: 3%;
+                    margin-left: 3%;
+                    margin-bottom: 15px;
+                }
+            }
+            
+            @media screen and (min-width: 769px) {
+                display: flex;
+                justify-content: center;
+            }
+            
+        }
+        
+        &_header {
+            display: block;
+            margin-bottom: 4.5px;
+            
+            @media screen and (min-width: 769px) {
+                font-size: 1.1rem;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+        }
+        
+        &_body {
+            
+            > img {
+                width: auto;
+                height: 45px;
+            }
+        }
+        
+    }
+}
+
+//-------------------------------
+//サイトについて
+//-------------------------------
+.bl_aboutSite {
+    padding-bottom: 18px;
+    
+    .bl_horizList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        > li {
+            margin: 13.5px 13.5px 0;
+        }
+        
+        &_link {
+            font-size: 1.26rem;
+        }
+    }
+}
+
+//-------------------------------
+//ページトップへいくボタン
+//-------------------------------
+
+.bl_pageTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 47px;
+    height: 47px;
+    display: none;
+    
+    &_link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(0,13,43,0.7);
+        position: relative;
+        
+        &::before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            border-top: 1px solid #fff;
+            border-right: 1px solid #fff;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) rotate(315deg);
+        }
+        
+    }
+}

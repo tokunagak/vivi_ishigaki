@@ -1,0 +1,33 @@
+//-------------------
+// スライダーのカスタム
+//-------------------
+.slick-dots {
+	position: absolute;
+	z-index: 3;
+    text-align:center;
+    top: 20px;
+    right: 10px;
+    
+    @media screen and (min-width: 769px) {
+        top: 40px;
+    }
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:40px;/*ドットボタンのサイズ*/
+    height:2px;/*ドットボタンのサイズ*/
+    display:block;
+    background:#fff;/*ドットボタンの色*/
+    border-width: 0;
+}
+
+.slick-dots .slick-active button{
+    background:#d6b33c;/*ドットボタンの現在地表示の色*/
+}

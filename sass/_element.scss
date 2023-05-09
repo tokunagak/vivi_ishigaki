@@ -1,0 +1,133 @@
+//--------------------------
+// ボタン
+//--------------------------
+.el_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    color: #fff;
+    max-width: 100%;
+    width: 200px;
+    height: 44px;
+    padding: 10px 0;
+    background: linear-gradient(#957b24, #ccad42);
+    font-size: 1.5rem;
+    transition: .25s;
+    
+    &:hover {
+        filter: brightness(140%);
+    }
+    
+    &__blue {
+        background: linear-gradient(#172a51, #3a5387) !important;
+    }
+    
+    &__large {
+        max-width: 400px;
+        width: 100%;
+        height: 54px;
+        font-size: 1.8rem;
+    }
+
+}
+
+//--------------------------
+// アイコン(before)
+//--------------------------
+.el_beforeIcon {
+    position: relative;
+    
+    &::before {
+        content: "";
+        display: inline-block;
+    }
+    
+    &__square::before {
+        width: .7em;
+        height: .7em;
+        border: 1px solid #fff;
+        margin-right: 0.2em;
+    }
+}
+
+//--------------------------
+// アイコン(after)
+//--------------------------
+.el_afterIcon {
+    position: relative;
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        transition: .25s;
+    }
+    
+    &__new::after {
+        content: "NEW";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 14px;
+        color: #fff;
+        background-color: #B62C2F;
+        font-size: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: 'EB Garamond', serif, "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    }
+    
+    &__arrow::after {
+        background-image: url(../image/icon_arrow_shadow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 10px;
+        width: 44px;
+        height: 18px;
+        
+    }
+}
+
+//--------------------------
+// 見出し
+//--------------------------
+
+.el_lv2Heading {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    > span {
+        position: relative;
+        display: inline-block;
+        transform: translateY(-20%);
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 100px;
+            height: 1px;
+            background-color: currentColor;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.el_lv3Heading {
+    font-size: 2.34rem;
+    line-height: 1.6;
+}
+
+
+//--------------------------
+// テキスト
+//--------------------------
+.el_txt {
+    font-size: 1.5rem;
+}
